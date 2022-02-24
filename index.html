@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css popup transitions</title>
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="section">
+        <h1>CSS Popup transitions</h1>
+        <button class="open">Open Popup</button>
+    </section>
+    <div class="shadow">
+        
+    </div>
+ 
+    <div class="popup">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <h2> Popup Transitions</h2>
+        <p>Click the button below to dismiss</p>
+        <button class="dismiss">Dismiss</button>
+    </div>
+    <!-- ion-icon cdn -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.querySelector(".open").addEventListener("click" , function(){
+            document.querySelector(".shadow").classList.add("active");
+            document.querySelector(".popup").classList.add("active");
+        })
+
+        document.querySelector(".dismiss").addEventListener("click" , function(){
+            document.querySelector(".shadow").classList.remove("active");
+            document.querySelector(".popup").classList.remove("active");
+        })
+    </script>
+</body>
+
+</html>
